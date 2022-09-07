@@ -1,0 +1,32 @@
+mixin product(img,name)
+  .product-box(onclick='showProduct()')
+    .card(style="width: 15rem;")
+      img(src='imgs/products/'+img height='300' class='card-img-top')
+      .card-body    
+        .title.d-flex.justify-content-between.align-items-center
+          .card-text #[h4 #{name}] 
+          .card-text.stars #[i.fa-regular.fa-star]4.0
+        .card-text #[span.nPrice 452.00$] #[span.oPrice.text-muted 475.00$] 
+
+mixin cart-box(img)
+  .card.mb-3( style="max-width: 540px;" onclick="showProduct()")
+    .row.g-0
+      .col-4
+        img(src="imgs/products/"+img class="img-fluid rounded-start" alt="...")
+      .col-8
+        .card-body
+          .card-title Citizen RTS 501
+          .card-text Producer : Citizen 
+          .card-text Model : 2022 
+          .card-text Made In : China 
+          .card-text
+            p(style={'color' : 'gold','font-size':'16px'})
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-regular fa-star")
+          .remove
+            i.fa-solid.fa-x
+          .price
+            span $552.00

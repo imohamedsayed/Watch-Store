@@ -1,0 +1,39 @@
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar {
+    width: 5px; /* for vertical scroll */
+    height: 5px; /* for horizontal scroll */
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #232323;
+    border: 1px solid #333;
+    border-radius: 20px;
+  }
+}

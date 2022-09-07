@@ -1,0 +1,27 @@
+{
+  "name": "mso",
+  "version": "1.0.0",
+  "description": "Watch Online Shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamed El-Sayed",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-notify": "^4.0.0",
+    "gulp-prefix": "^0.0.15",
+    "gulp-pug": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.8",
+    "static-server": "^2.2.1"
+  }
+}

@@ -1,0 +1,43 @@
+include mixins
+.products.mt-5.d-none
+  .row
+    div.col-1.d-none.d-md-block
+    .main
+      .deal
+        h3 Deal OF The Day
+        .card(class="card m-auto" style="max-width: 800px;")
+          .row.g-0
+            .col-md-4.text-center.align-items-center
+              video(muted autoplay loop class="img-fluid rounded-start")
+                source(src="imgs/vids/watch.mp4" type="video/mp4")
+            .col-md-8
+              .card-body
+                .card-title SWATCH SWISS
+                p This Amazing Watch Comes With Powerful Engine.
+                span.newPrice 800$
+                span &nbsp;Instead Of &nbsp;
+                span.oldPrice.text-muted 1200$
+                br
+                span.btn Get It Now
+      .trend
+        h3 Trend
+        .products-container.d-flex
+          -var trendWatches = ['p-1.jpg','p-18.jpg','p-2.jpg','p-3.jpg','p-4.jpg','p-5.jpg','p-6.jpg'];
+          each item in trendWatches
+            +product(item,'Rolex GTM New Master')
+      .classic
+        h3 Classic
+        .products-container.d-flex
+          -var trendWatches = ['p-7.jpg','p-8.jpg','p-9.jpg','p-10.jpg','p-11.jpg','p-12.jpg','p-20.jpg'];
+          each item in trendWatches
+            +product(item,'Rolex GTM New Master')
+      .new
+        h3 New
+        .products-container.d-flex
+          -var trendWatches = ['p-13.jpg','p-14.jpg','p-15.jpg','p-16.jpg','p-17.jpg','p-18.jpg','p-21.jpg'];
+          each item in trendWatches
+            +product(item,'Rolex GTM New Master')
+
+
+
+

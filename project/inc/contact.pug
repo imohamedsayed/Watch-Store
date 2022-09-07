@@ -1,0 +1,31 @@
+include mixins
+.contact-section.mt-5.d-none
+  .row
+    .main.position-relative
+      .container
+        .chat
+          .head.d-flex.mb-5
+            .img-box
+              img(src='imgs/logo/logo.jpg' class='img-fluid')
+            .hello
+              h1 Hello, We're Online
+              p Start Conversation  
+          .we.message-box
+            p Hi there! You can start asking your question below. I am ready to help
+            br
+            p How can I help?
+            br
+            span.text-muted 12:00 AM
+          .him-message-box.text-end
+            p I Loved Your Watches
+            br
+            span.text-muted 12:15 AM
+          .we.message-box
+            p Thanks <3 !
+            br
+            span.text-muted 12:00 AM
+    .chat-box
+      div.attachment #[i.fa-solid.fa-paperclip]
+      div.message #[input(type='text' placeholder='Type your message...')]
+      div.send #[i.fa-solid.fa-paper-plane]
+

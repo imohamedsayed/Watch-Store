@@ -1,0 +1,188 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+.product-view {
+  background-color: #14141494;
+  min-height: 80vh;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+  @include breakpoint(mobile) {
+    width: 100vw;
+  }
+  .main {
+    gap: 50px;
+    min-height: 100vh;
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+    @include breakpoint(medium) {
+      flex-direction: column;
+    }
+    .product-img {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(small) {
+        width: 100%;
+      }
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      @include breakpoint(medium) {
+        width: 100%;
+      }
+      .img-box {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.177);
+        width: 80%;
+        height: 50%;
+        @include breakpoint(small) {
+          height: 100%;
+        }
+        @include breakpoint(mobile) {
+          height: 100%;
+        }
+        @include breakpoint(small) {
+          height: 100%;
+        }
+        @include breakpoint(medium) {
+          height: 100%;
+        }
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+    .product-details {
+      padding: 20px;
+      h1 {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .price {
+        margin: 20px 0;
+        .newP {
+          color: #fa0;
+          font-weight: 700;
+        }
+        .oldP {
+          text-decoration: line-through;
+        }
+      }
+      .other-imgs {
+        display: flex;
+        gap: 30px;
+        margin: 40px 0;
+        .img {
+          width: 120px;
+          height: 120px;
+          padding: 5px;
+          background-color: rgba(127, 200, 255, 0.22);
+          border-radius: 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.05);
+          }
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+          }
+        }
+      }
+      .description {
+        margin: 20px 0;
+        h3 {
+          color: #fff;
+        }
+        p {
+          font-size: 20px;
+          color: gray;
+          .more {
+            text-decoration: none;
+            color: #fa0;
+            font-weight: bold;
+          }
+        }
+      }
+      .options {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+        .colors {
+          h3 {
+            color: #fff;
+          }
+          width: 400px;
+          text-align: center;
+          .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            span {
+              display: block;
+              width: 24px;
+              height: 24px;
+              cursor: pointer;
+              border-radius: 50%;
+              transition: all 0.3s ease;
+              &.active {
+                border: 3px solid rgb(78, 75, 75);
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+        .sizing {
+          width: 400px;
+          text-align: center;
+          h3 {
+            color: #fff;
+          }
+          span {
+            font-size: 20px;
+            display: inline-block;
+            margin: 0 5px;
+            color: gray;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &.active {
+              color: #fa0;
+              font-weight: bold;
+              font-size: 28px;
+            }
+          }
+        }
+      }
+      .btns {
+        display: flex;
+        justify-content: space-around;
+        .add {
+          border: 1px solid #fa0;
+          color: #fa0;
+          padding: 20px 40px;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: #fa0;
+            color: white;
+          }
+        }
+        .buy {
+          background-color: #fa0;
+          padding: 20px 40px;
+          color: white;
+        }
+      }
+    }
+  }
+}

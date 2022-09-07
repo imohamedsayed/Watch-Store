@@ -1,0 +1,27 @@
+@use "layout/landing";
+@use "pages/products";
+@use "pages/profile";
+@use "pages/cart";
+@use "pages/contact";
+@use "pages/productView";
+@use "helpers/variables" as *;
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #000;
+  border: none !important;
+  border-left: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $blue-color;
+  border-radius: 10px;
+}

@@ -1,0 +1,78 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.products {
+  background-color: #14141494;
+  min-height: 100vh;
+  margin-right: 0;
+  padding-right: 0;
+  @include breakpoint(mobile) {
+    width: 100vw;
+  }
+  .card {
+    border: none;
+    background-color: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+    }
+    .stars {
+      color: #fa0;
+    }
+    .nPrice {
+      color: $blue-color;
+      font: {
+        weight: bold;
+        size: 20px;
+      }
+      margin-right: 10%;
+    }
+    .oPrice {
+      text-decoration: line-through;
+    }
+  }
+
+  .products-container {
+    padding-left: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    @include scrollBar;
+    .product-box {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+      margin-bottom: 20px;
+    }
+  }
+  h3 {
+    color: white;
+    margin: 20px 10px;
+  }
+  .deal {
+    video {
+      height: 300px;
+      margin-top: 10px;
+    }
+    .card-title {
+      color: #fa0;
+      font-size: 40px;
+    }
+    span {
+      font-size: 40px;
+      &.btn {
+        font-size: 25px;
+        margin-top: 20px;
+        background-color: #fa0;
+        color: white;
+      }
+    }
+    .newPrice {
+      color: $blue-color;
+    }
+    .oldPrice {
+      text-decoration: line-through;
+    }
+  }
+}

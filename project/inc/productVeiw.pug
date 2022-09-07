@@ -1,0 +1,49 @@
+include mixins
+.product-view.mt-5.d-none
+  .row
+    .main.d-flex
+      .product-img
+        .img-box
+          img(src='imgs/products/pp-2.jpg' class='img-fluid')
+      .product-details
+        h1 ROLEX NEW GMT-MASTER
+        h3.price #[span.newP $452.00] &nbsp;&nbsp; #[span.oldP $475.00]
+        .starts 
+          p(style={'color' : 'gold','font-size':'16px'})
+            i(class= "fa-solid fa-star")
+            i(class= "fa-solid fa-star")
+            i(class= "fa-solid fa-star")
+            i(class= "fa-solid fa-star")
+            i(class= "fa-regular fa-star")
+        .other-imgs
+          .img
+            img(src='imgs/products/p-1.jpg'  class='img-fluid') 
+          .img
+            img(src='imgs/products/p-2.jpg'  class='img-fluid')
+          .img
+            img(src='imgs/products/p-3.jpg'  class='img-fluid')
+          .img
+            img(src='imgs/products/p-4.jpg'  class='img-fluid')
+        .description
+          h3.text-uppercase Description 
+          p The limited edition of 70 pieces combines a 950 platinum case and bracelet with an elegant black anyx dial adorned.. #[a.more(href='#') More]
+
+        .options 
+          .colors
+            h3 Color
+            .color-options
+              span.active(style={'background-color':'#737373'})
+              span(style={'background-color':'wheat'})
+              span(style={'background-color':'indianred'})
+              span(style={'background-color':'white'})
+          .sizing
+            h3 Sizing
+            .size-options
+              span.active 11.5
+              span 12.3
+              span 13.6
+              span 14.79
+
+        .btns.mt-5
+          .btn.add Add To Cart
+          .btn.buy BUY NOW

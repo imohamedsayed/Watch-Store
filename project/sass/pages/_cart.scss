@@ -1,0 +1,125 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.cart-page {
+  background-color: #14141494;
+  min-height: 100vh;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+  @include breakpoint(mobile) {
+    width: 100vw;
+  }
+  .mycart {
+    display: flex;
+    gap: 2%;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
+    .cart-content {
+      width: 65%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      @include breakpoint(small) {
+        width: 100%;
+      }
+      padding: 20px;
+      .card {
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        background-color: #1f1f1f;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        img {
+          height: 100%;
+          width: 200px;
+        }
+        .card-title {
+          font-weight: bold;
+          font-size: 35px;
+        }
+        .card-text {
+          line-height: 2;
+        }
+        .remove {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          padding: 10px 12px;
+          border-radius: 50%;
+          background-color: red;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            box-shadow: 0 0 5px 1px #fff;
+          }
+        }
+        .price {
+          position: absolute;
+          top: 50%;
+          right: 10%;
+          transform: translate(-10%, -50%);
+          font-weight: bold;
+          color: #fa0;
+          font-size: 25px;
+        }
+      }
+    }
+    .payment-options {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > div {
+        font-size: 30px;
+        color: white;
+      }
+      .shipFee,
+      .taxFee {
+        color: $blue-color;
+      }
+      .groundTotal {
+        color: #088;
+      }
+      .mb-4 {
+        font-size: 35px;
+        color: white;
+        .totalMoney {
+          color: #fa0;
+        }
+      }
+      .btn {
+        background-color: $blue-color;
+        width: 300px;
+        transition: all 0.3s ease;
+        &:hover {
+          outline: none;
+          border: none;
+          transform: scale(1.2);
+        }
+      }
+      @include breakpoint(mobile) {
+        width: 100%;
+        text-align: center;
+        .btn {
+          margin: 0 auto;
+        }
+        margin-bottom: 50px;
+      }
+      @include breakpoint(small) {
+        width: 100%;
+        text-align: center;
+        .btn {
+          margin: 0 auto;
+        }
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

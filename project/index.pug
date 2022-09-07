@@ -1,0 +1,74 @@
+doctype 
+html(lang='en')
+  head
+    include inc/styles 
+    title Watch
+  body
+    .landing
+      .overlay
+      .row
+        .aside.col-1.d-md-flex.d-none
+          include inc/aside
+
+        .slider-aside.d-flex.d-md-none
+          include inc/aside
+          .sliderAside-toggler
+            i.fa-solid.fa-table-cells-large
+        div.col-1.d-none.d-md-block
+        .main.col-11
+
+          .nav
+            .logo
+              h2 AMARE#[span TT]E
+            .right.d-none.d-md-flex
+              ul.list-unstyled
+                li #[a(href='#') Trend ]
+                li #[a(href='#') Classic ]
+                li #[a(href='#') News ]
+              .reg
+                a(href='#') Login
+                .btn.rounded-pill Sign up 
+            .nav-toggler.d-md-none.d-block
+              i.fa-solid.fa-bars
+          .navigation-menu.d-block.d-md-none
+            ul.list-unstyled.w-100.text-center.d-block
+              li #[a(href='#') Trend ]
+                li #[a(href='#') Classic ]
+                li #[a(href='#') News ]
+                li #[a(href='#') Login]
+                li #[.btn.rounded-pill Sign up] 
+          .landing-content
+            .row
+              .intro.col-md-4.col-12
+                h1 Octo #[br] Finissimo S
+                p eile eves. Sahar wcennoaninte ssa mieseonoeuneta Ce an ke eras eile eves. Sahar wcennoaninte ssa mieseonoeuneta Ce an ke eras
+                .buttons
+                  .btn.next.rounded-pill Next
+                  .btn.more.rounded-pill More
+              .collection.col-8.d-none.d-md-block
+                h1 Collections
+                .wrapper 
+                  .item.active(data-collection=1) Omega
+                  .item(data-collection=2) Seiko
+                  .item(data-collection=3) Rolex
+                  .item(data-collection=4) Cartier
+                  .item(data-collection=5) Zenith
+                  .item(data-collection=6) IWC
+                  .item(data-collection=7) Citizen
+                  .item(data-collection=8) Fossil
+                  .item(data-collection=9) Casio
+                .collection-items.mt-5
+                  -var pngs =["w-1.png", "w-2.png", "w-20.png", "w-4.png"]
+                  each img in pngs
+                    .collection-item
+                      img(src='imgs/products/png/'+img class='img-fluid')
+          include inc/products
+          include inc/user
+          include inc/cart
+          include inc/contact
+          include inc/productVeiw
+
+
+
+
+    include inc/scripts

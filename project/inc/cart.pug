@@ -1,0 +1,17 @@
+include mixins
+.cart-page.mt-5.d-none
+  .row
+    .main
+      .mycart
+        .cart-content
+          +cart-box('p-4.jpg')
+          +cart-box('p-1.jpg')
+          +cart-box('p-3.jpg')
+          +cart-box('p-6.jpg')
+        .payment-options
+          div.mb-4 Subtotal : #[span.totalMoney $4000.00]
+          div Shipping : #[span.shipFee $100.00]
+          div Tax : #[span.taxFee $40.00]
+
+          div.gTotal.mt-4 Ground Total :#[span.groundTotal $4100.00]
+          .btn.mt-5 Check out
